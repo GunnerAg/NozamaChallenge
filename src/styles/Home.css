@@ -1,0 +1,122 @@
+
+.mainHomeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-evenly;
+}
+
+.headerContainer{
+    width: 80vw;
+    padding-left:6vw;
+    padding-right: 6vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.companyLogo{
+    margin-bottom: 0%;
+    background-position:bottom;
+    background: url(../images/nozama_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:260px;
+    height: 100px;
+}
+
+.challenge{
+    font-size: 50px;
+    color: rgba(128, 128, 128, 0.6);
+    letter-spacing: 5px;
+}
+
+.indicatorsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:90vw;
+    height: fit-content;
+    align-items: flex-end;
+}
+
+.chart-container{
+    width: calc(50vw + 300px );
+    height: fit-content;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.068);
+ 
+}
+
+
+.overChart{
+    display: flex;
+    height: 10%;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1%;
+}
+
+ .overChartIcon{
+    background: url(../images/recycling.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height:  calc(25px + 0.8vw);
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.overChartTxt{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: calc(10px + 0.8vw);
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 15px;
+} 
+
+#chart{ 
+    height: calc(35vh + 15vw)!important;
+}
+
+
+@media (max-width: 950px){
+
+    .headerContainer{
+        width: 70vw;
+        flex-direction: column;
+    }
+
+    .indicatorsContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width:100vw;
+    }
+    .chart-container{
+        width: 80vw;
+        height: fit-content;
+        position: relative;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.068);
+    }
+
+    .overChart{
+        height: 30px;
+    }
+
+    .overChartIcon{
+        width: 30px;
+        height: 30px;  
+    }
+    .overChartTxt{
+        font-size: 18px;
+    }
+    .challenge{
+        font-size: 30px;
+    }
+     
+}

@@ -1,0 +1,84 @@
+.dateContainer{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator
+{
+    width: 100%;
+    margin-left:0%;
+    height: 50px;
+}
+
+.inputContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px;
+    position: relative;
+    box-shadow:  3px 3px 3px rgba(0, 0, 0, 0.5);
+    width: 20vw;
+    height: 50px;
+
+}
+
+.iconCalendar{
+    height: calc(20px + 1vw);
+    width: calc(20px + 1vw);
+    margin-right: 5px;
+    background-image: url(../images/calendar.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.dateInput{
+    width: 20vw;
+    height: 50px;
+    opacity:0;
+    position: absolute;
+    padding-left: 0;
+    border:solid blue 2px
+}
+
+.coverInput{
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 200;
+    width: fit-content;
+    letter-spacing: 1px;
+    line-height: 50px;
+    height: 50px;
+    font-size: calc(1vw) ;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+@media (max-width: 950px){
+    .iconCalendar{
+        height: calc(30px + 1vw);
+        width: calc(30px + 1vw);
+    }
+    .coverInput{
+        font-size: calc(4vw);
+    }
+    .inputContainer{
+        justify-content: space-evenly;
+        width: 80vw;
+        height: 50px;
+        
+    }
+    .dateInput{
+        width: 80vw;
+        height: 50px;
+        
+    }
+    input[type=date]::-webkit-calendar-picker-indicator
+    {
+        width: 100%;
+        margin-left:0%;
+        height: 100px;
+    }
+    
+}
