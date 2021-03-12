@@ -1,23 +1,8 @@
-/* INDICADOR T.R.R  */
-.indicatorContainerA{
-    box-shadow:  3px 3px 3px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    width: 20vw;
-    height: 100px;
-}
+/*------------------------------------------*/
+/*--------COMUN A AMBOS INDICADORES--------*/
+/* ---------------------------------------*/
 
-.iconIndicatorA{
-    margin-top: 0.2%;
-    margin-left: 0.2%;
-    text-align: start;
-    background: url(../images/trr.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width:40px;
-    height: 40px;
-    position: absolute;  
-}
-
+/* TEXTO DEL ENCABEZADO DEL INDICADOR */
 .indicatorText{
     width:fit-content;
     font-family: 'Noto Sans JP', sans-serif;
@@ -30,6 +15,32 @@
     color: rgba(0, 0, 0, 0.6);
 }
 
+/*------------------------------------------*/
+/*-----------INDICADOR A (T.R.R)-----------*/
+/* ---------------------------------------*/
+
+/* CONTENEDOR PRINCIPAL DEL INIDCADOR A */
+.indicatorContainerA{
+    box-shadow:  3px 3px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 20vw;
+    height: 100px;
+}
+
+/* ICONO DEL INDICADOR A*/
+.iconIndicatorA{
+    margin-top: 0.2%;
+    margin-left: 0.2%;
+    text-align: start;
+    background: url(../images/trr.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:40px;
+    height: 40px;
+    position: absolute;  
+}
+
+/* LOS DATOS QUE MUESTRA EL INDICADOR A*/
 .dataContainerA{
     margin-top: -7%;
     font-family: 'Noto Sans JP', sans-serif;
@@ -38,8 +49,11 @@
 }
 
 
-/* INDICADOR RECOVERED  */
+/*------------------------------------------*/
+/*---------INDICADOR B (RECOVERED)---------*/
+/* ---------------------------------------*/
 
+/* CONTENEDOR PRINCIPAL DEL INIDCADOR B */
 .indicatorContainerB{
     box-shadow:  3px 3px 3px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
@@ -48,6 +62,7 @@
     position: relative;
 }
 
+/* ICONO DEL INDICADOR B*/
 .iconIndicatorB{
     margin-top: 2%;
     margin-left: 2%;
@@ -60,6 +75,7 @@
     position: absolute;
 }
 
+/* CONTENEDOR PARA LOS DATOS + LAS UNIDADES */
 .indicatorData{
     margin-top: -7%;
     display: flex;
@@ -69,12 +85,14 @@
     align-content: flex-end;
 }
 
+/* LOS DATOS QUE MUESTRA EL INDICADOR B*/
 .dataContainerB{
     font-family: 'Noto Sans JP', sans-serif;
     font-size: calc(25px + 1vw);
     font-weight: 900;
 }
 
+/* LAS UNIDADES DE LOS DATOS DEL INDICADOR B*/
 .kgSymbol{
     margin-bottom: 1%;
     color: rgba(0, 0, 0, 0.5);
@@ -84,6 +102,7 @@
     align-self: flex-end;
 }
 
+/* VERSION MOVIL Y TABLETS */
 @media (max-width: 950px){
 
     .indicatorContainerA{

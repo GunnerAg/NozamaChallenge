@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Indicator.css'
 
+//Otro componente sencillo, simplemente para mostrar otra parte de los datos.
 export default function IndicatorB(props) {
 
 let {data}=props

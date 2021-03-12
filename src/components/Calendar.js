@@ -1,25 +1,17 @@
-import React,{useState} from 'react'
+import React from 'react'
 import '../styles/Calendar.css'
-//Separo la lógica del formateo de las fechas tanto para anular la seleccion de fechas posteriores al dia actual
-//como para el reformateo de la fecha a mostrar.
-import {maxDateFormater,displayDateFormater} from '../DateFormater'
 
+//El componente Calendario.
 export default function Calendar(props) {
 
+    //Desestructuro los props para no usar pros.x todo el rato.
     let{dateDisplay,maxDate}=props
-    //Declaramos la fecha actual, un estado con la fecha actual como seleccion inicial y la maxima fecha que se puede seleccionar en el calendario (la actual)
-    // let date = new Date(Date.now())
-    // let maxDate=maxDateFormater(date)
-    // let [dateDisplay,setDateDisplay]=useState(displayDateFormater(date));
-    
-    //Actualizamos el estado cuando una nueva fecha es seleccionada.
-    // let handleDate=(e)=>{
-    //     console.log('there', e.currentTarget.value)
-    //     setDateDisplay(displayDateFormater(e.currentTarget.value))
-    // }
 
-    //creo un componente sencillo que me da la fecha en el formato adecuado.
+    //Para no hacer mas complejo el return principal de calendar, y ya que esto solo da formato y estilo al texto que se muestra en el 
+    //selector del calendario, decido seprarlo en un pseudocomponente, ya que es demasiado sencillo y poco reusable como para ser
+    //un componente separado.
     let Displayable=()=>{
+        //desestructuro la el objeto con los datos que voy a usar.
         const{dayDisplayTxt,monthDisplay,selecetdYear,dayDisplayNumb}=dateDisplay
         return(
             <div className="dateContainer">
@@ -29,8 +21,10 @@ export default function Calendar(props) {
         )
     }
 
-    //Como HTML no permite cambiar los formatos del input type date he posicionado debajo un elemento con
-    //el formato adecuado y cambiado la opacidad del elemento input a 0.
+    //El return principal del Componente Calendario, ya que HTML no me permitía estilizar el input
+    //y no queria usar otra libreria externa que me diese componentes estilizados (tipo bootstrap)`
+    //se me ocurrio usar un span encima debajo del calendario real, con CSS le puse una opacidad de 0
+    //y usando position: relative/absolute los superpuse. quiza no es la mejor solucion del mundo, pero funciona.
     return (
         <>
             <div className="inputContainer">

@@ -1,4 +1,5 @@
 
+/* CONTENEDOR PRINCIPAL DEL COMPONENTE */
 .mainHomeContainer{
     display: flex;
     flex-direction: column;
@@ -6,6 +7,8 @@
     height: 100vh;
     justify-content: space-evenly;
 }
+
+/* CONTENEDOR DEL LOGO Y CHALLENGE */
 
 .headerContainer{
     width: 80vw;
@@ -17,6 +20,8 @@
     align-items: center;
 }
 
+/* EL LOGO */
+
 .companyLogo{
     margin-bottom: 0%;
     background-position:bottom;
@@ -27,12 +32,14 @@
     height: 100px;
 }
 
+/* LA PALABRA CHALLENGE */
 .challenge{
     font-size: 50px;
     color: rgba(128, 128, 128, 0.6);
     letter-spacing: 5px;
 }
 
+/* CONTENEDOR DE LOS 3 INDICADORES */
 .indicatorsContainer{
     display: flex;
     flex-direction: row;
@@ -42,6 +49,7 @@
     align-items: flex-end;
 }
 
+/* CONTENEDOR DE LA GRAFICA */
 .chart-container{
     width: calc(50vw + 300px );
     height: fit-content;
@@ -50,7 +58,7 @@
  
 }
 
-
+/* CONTENEDOR DEL TEXTO Y LOGO ENCIMA DE LA GRAFICA*/
 .overChart{
     display: flex;
     height: 10%;
@@ -59,6 +67,7 @@
     padding-left: 1%;
 }
 
+/* EL ICONO DE RECICLAJE SUPERPUESTO A LA GRAFICA*/
  .overChartIcon{
     background: url(../images/recycling.png);
     background-repeat: no-repeat;
@@ -69,6 +78,7 @@
     margin-left: 1%;
 }
 
+/* TEXTO SUPERPUESTO EN LA GRAFICA */
 .overChartTxt{
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 700;
@@ -78,11 +88,7 @@
     margin-left: 15px;
 } 
 
-#chart{ 
-    height: calc(35vh + 15vw)!important;
-}
-
-
+/* VERSION MOVIL Y TABLETS */
 @media (max-width: 950px){
 
     .headerContainer{

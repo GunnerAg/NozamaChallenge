@@ -1,6 +1,7 @@
+
+//Dos arrays de datos que he creado para poder dar el formato necesario en las funciones siguientes.
 const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-
 
 //-------------------------------------DATES DATA FORMATERS-------------------------------------//
 // RESTRICCION FECHA MAXIMA A LA FECHA ACTUAL.
@@ -42,20 +43,30 @@ export function displayDateFormater(selectedDate){
 
 
 //-------------------------------------PLOT DATA FORMATERS-------------------------------------//
-
+//Devuelve un trozo de los datos tanto de los meses como de los valores asociados.
 export function dataChunker(month,dataSet){
-    let  m=parseFloat(month);
+    //Por si acaso paso el valor de month a type number.
+    let  m=parseInt(month);
     let i=m-2;
+    //Declaro los arrays donde guardare los datos que quiero obtener
     let dataArr=[];
     let monthsArr=[];
+      //Un viejo amigo, el bucle for con el que obtengo los datos de forma que
+      // me devuelva datos para los dos meses anteriores y 3 posteriores al mes
+      //seleccionado, y en caso de ser enero, febrero, octubre, noviembre o diciembre
+      //me devuelve los datos de forma correcta.
+      //Como los datos son falsos no necesito añadir o quitar un año en los datos, pero sería sencillo dentro de esta función.
       for(i;i<=m+3;i++){
         let x=i
         if(i<=0){x=i+12}
         if(i>12){x=i-12}
+        //asigno un valor a set, es el valor para cada uno de los meses a mostrar.
         let set=(Object.values(dataSet['MONTHLY-AVRG']))[(x-1).toString()]
+        // para cada valor de set, añado el mes correspondiente y el valor de set a sus arrays.
         monthsArr.push(months[x-1])
         dataArr.push(set)
       };
+  //Devuelvo los datos para los intervalos que se muestran en la gráfica.
   return {dataArr,monthsArr}
 }
 
