@@ -102,7 +102,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
 
     .chart-container{
@@ -112,8 +112,8 @@
 
     .overChart{
         height: 30px;
-        margin-bottom: 2%;
-        margin-top: 2%;
+        margin-bottom: 1%;
+        margin-top: 1%;
     }
 
     .overChartIcon{

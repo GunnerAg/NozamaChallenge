@@ -1,6 +1,6 @@
 .canvasContainer{
     width:68vw;
-    height:40vh
+    height:40vh;
 }
 
 @media (max-width: 768px){
