@@ -1,7 +1,3 @@
-// Aqui genero los datos falsos, en un caso real este archivo está en el backend y se obtiene usando una REST API
-// por ejemplo usando axios get method dentro de un lifecycle method de React o en caso de usar hooks (siempre mejor)
-// dentro del hook useEffect, el cual aporta la funcionalidad de todos los lifecycle methods de los class components.
-
 export default function getRandomData(){
 
     let randomizer=function(){

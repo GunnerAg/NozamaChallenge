@@ -1,26 +1,20 @@
-
-/* CONTENEDOR PRINCIPAL DEL COMPONENTE */
 .mainHomeContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    align-content: space-between;
     height: 100vh;
-    justify-content: space-evenly;
 }
 
-/* CONTENEDOR DEL LOGO Y CHALLENGE */
-
 .headerContainer{
-    width: 80vw;
-    padding-left:6vw;
-    padding-right: 6vw;
+    width: 70vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3%;
 }
-
-/* EL LOGO */
 
 .companyLogo{
     margin-bottom: 0%;
@@ -28,46 +22,43 @@
     background: url(../images/nozama_logo.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width:260px;
-    height: 100px;
+    width:240px;
+    height: 80px;
 }
 
-/* LA PALABRA CHALLENGE */
 .challenge{
-    font-size: 50px;
+    font-size: 40px;
     color: rgba(128, 128, 128, 0.6);
     letter-spacing: 5px;
 }
 
-/* CONTENEDOR DE LOS 3 INDICADORES */
 .indicatorsContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width:90vw;
+    justify-content: space-between;
+    width: 70vw;
     height: fit-content;
     align-items: flex-end;
 }
 
-/* CONTENEDOR DE LA GRAFICA */
 .chart-container{
-    width: calc(50vw + 300px );
-    height: fit-content;
     position: relative;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.068);
- 
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.068);
+    margin-top: 2%;
+    padding: 1%;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
-/* CONTENEDOR DEL TEXTO Y LOGO ENCIMA DE LA GRAFICA*/
 .overChart{
     display: flex;
     height: 10%;
     flex-direction: row;
     align-items: center;
+    padding-bottom: 2%;
     padding-left: 1%;
 }
 
-/* EL ICONO DE RECICLAJE SUPERPUESTO A LA GRAFICA*/
  .overChartIcon{
     background: url(../images/recycling.png);
     background-repeat: no-repeat;
@@ -78,51 +69,69 @@
     margin-left: 1%;
 }
 
-/* TEXTO SUPERPUESTO EN LA GRAFICA */
 .overChartTxt{
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 700;
     font-size: calc(10px + 0.8vw);
     letter-spacing: 1px;
     color: rgba(0, 0, 0, 0.6);
-    margin-left: 15px;
+    margin-left: 1vh;
 } 
 
-/* VERSION MOVIL Y TABLETS */
-@media (max-width: 950px){
+@media (max-width: 768px){
+
+    .mainHomeContainer{
+        justify-content: center;
+    }
 
     .headerContainer{
-        width: 70vw;
+        width: 80vw;
         flex-direction: column;
     }
 
+    .companyLogo{
+        width:70vw;
+        height: 100px;
+        background-size: contain;
+        background-position: center;
+    }
+
     .indicatorsContainer{
+        width: 80vw;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        width:100vw;
+        margin-bottom: 2%;
     }
+
     .chart-container{
-        width: 80vw;
-        height: fit-content;
         position: relative;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.068);
+        height: fit-content;
     }
 
     .overChart{
         height: 30px;
+        margin-bottom: 2%;
+        margin-top: 2%;
     }
 
     .overChartIcon{
         width: 30px;
         height: 30px;  
     }
+
     .overChartTxt{
-        font-size: 18px;
+        font-size: 16px;
     }
+
     .challenge{
-        font-size: 30px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        width: 70vw;
+        height: 75px;
+        font-size: calc(22px + 3.5vw);
+        letter-spacing: 1vw;
     }
      
 }

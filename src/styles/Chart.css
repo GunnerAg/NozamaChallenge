@@ -1,0 +1,11 @@
+.canvasContainer{
+    width:68vw;
+    height:40vh
+}
+
+@media (max-width: 768px){
+    .canvasContainer{
+        width:88vw;
+        height:17vh
+    }
+}

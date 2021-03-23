@@ -1,17 +1,14 @@
-/* CONTENEDOR PRINCIPAL DEL COMPONENTE */
 .inputContainer{
+    border: solid 1px rgba(0, 0, 0, 0.3);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 15px;
     position: relative;
-    box-shadow:  3px 3px 3px rgba(0, 0, 0, 0.5);
+    box-shadow:  1px 1px 1px rgba(0, 0, 0, 0.5);
     width: 20vw;
     height: 50px;
-
 }
 
-/* ICONO CALENDARIO */
 .iconCalendar{
     height: calc(20px + 1vw);
     width: calc(20px + 1vw);
@@ -22,8 +19,8 @@
     position: relative;
 }
 
-/* ESTE COMPONENTE ES LO QUE SE VE, PESE A QUE ENCIMA DE EL ESTA EL INPUT REAL */
 .coverInput{
+    color: rgba(0, 0, 0, 0.7);
     text-align: center;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 200;
@@ -31,19 +28,17 @@
     letter-spacing: 1px;
     line-height: 50px;
     height: 50px;
-    font-size: calc(1vw) ;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 1.2vw ;
+    padding-left: 1px;
+    padding-right: 1px;
     position: relative;
 }
 
-/* CONTIENE EL TEXTO DE LA FECHA */
 .dateContainer{
     display: flex;
     flex-wrap: nowrap;
 }
 
-/* CON ESTO HAGO QUE EL AREA CLICKABLE QUE ACTIVA EL INPUT SEA DEL 100% */
 input[type=date]::-webkit-calendar-picker-indicator
 {
     width: 100%;
@@ -51,35 +46,33 @@ input[type=date]::-webkit-calendar-picker-indicator
     height: 50px;
 }
 
-/* EL INPUT REAL DEL CALENDARIO, ESTA ESCONDIDO CON OPACIDAD 0, SI LA PONES A 1 IGUAL TE DA ALGO */
-/* SE SUPERPONE AL ELEMENTO COVERINPUT . */
-
 .dateInput{
     width: 20vw;
     height: 50px;
     opacity: 0;
     position: absolute;
     padding-left: 0;
-    border:solid blue 2px
 }
 
-/* VERSION MOVIL Y TABLETS */
-@media (max-width: 950px){
+@media (max-width: 768px){
     .iconCalendar{
-        height: calc(30px + 1vw);
-        width: calc(30px + 1vw);
+        height: calc(25px + 1vw);
+        width: calc(25px + 1vw);
     }
+
     .coverInput{
-        font-size: calc(4vw);
+        font-size: 4vw;
     }
+
     .inputContainer{
         justify-content: space-evenly;
-        width: 80vw;
+        margin-bottom: 15%;
+        width: 90vw;
         height: 50px;
         
     }
     .dateInput{
-        width: 80vw;
+        width: 90vw;
         height: 50px;
         
     }
